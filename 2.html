@@ -207,11 +207,16 @@
 
         /* nav link (mẫu 3) shown in mẫu 2 */
         .nav-links {
-            margin-top: 18px;
+            /* place at bottom center so it's visible like other pages */
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
             pointer-events: auto; /* allow clicks while parent is pointer-events:none */
             display: inline-flex;
             gap: 12px;
             align-items: center;
+            z-index: 200;
         }
 
         .nav-links a {
