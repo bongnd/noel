@@ -204,6 +204,33 @@
             padding: 2px 5px;
             pointer-events: none;
         }
+
+        /* nav link (mẫu 3) shown in mẫu 2 */
+        .nav-links {
+            margin-top: 18px;
+            pointer-events: auto; /* allow clicks while parent is pointer-events:none */
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 18px;
+            background: rgba(212,175,55,0.06);
+            color: #d4af37;
+            text-decoration: none;
+            border: 1px solid rgba(212,175,55,0.18);
+            font-weight: 700;
+            box-shadow: 0 0 10px rgba(212,175,55,0.06);
+            transition: background 0.18s, color 0.18s;
+        }
+
+        .nav-links a.prev { padding-left: 12px; }
+        .nav-links a.next { padding-right: 12px; }
+
+        .nav-links a:hover { background: rgba(212,175,55,0.12); color: #fff; }
     </style>
 
     <style>
@@ -232,6 +259,10 @@
 
     <div id="ui-layer">
         <h1>Merry Christmas</h1>
+        <div class="nav-links" aria-label="chuyển mẫu">
+            <a class="prev" href="index.html">‹ Quay lại</a>
+            <a class="next" href="3.html">Tiếp ›</a>
+        </div>
     </div>
 
     <div id="webcam-wrapper">
