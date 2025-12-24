@@ -70,6 +70,30 @@
             animation: pulse 1.5s infinite;
         }
 
+        /* Navigation links for mẫu 2 / mẫu 3 (override parent pointer-events:none) */
+        .nav-links {
+            pointer-events: auto; /* allow clicks despite parent */
+            margin-top: 12px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 8px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.06);
+            color: #FFD700;
+            border: 1px solid rgba(255,215,0,0.25);
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 0 12px rgba(255,215,0,0.08);
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,215,0,0.12);
+            color: #fff;
+        }
+
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -129,6 +153,11 @@
             &nbsp;|&nbsp; 🤲<b>2 Tay Cong:</b> Trái Tim
         </div>
         <button id="btnStart" onclick="startSystem()">Start</button>
+
+        <div class="nav-links" aria-label="chuyển mẫu">
+            <a href="2.html">Mẫu 2</a>
+            <a href="3.html">Mẫu 3</a>
+        </div>
     </div>
 
     <div id="canvas-container"></div>
@@ -607,5 +636,9 @@
         function logError(e) { document.getElementById('error-log').style.display = 'block'; document.getElementById('error-log').innerText += e + "\n"; }
     </script>
 </body>
+<<<<<<< HEAD:1.html
+</html>
+=======
 
 </html>
+>>>>>>> d041ed962795a4542cad8bc24b11eabceebb7eb2:index.html
