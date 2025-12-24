@@ -64,6 +64,29 @@
             font-family: 'Quicksand', sans-serif;
         }
 
+        /* Navigation links (prev/next) */
+        .nav-links {
+            pointer-events: auto; /* allow clicks even though parent has pointer-events:none */
+            margin-top: 12px;
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.04);
+            color: #E6E6FA;
+            text-decoration: none;
+            border: 1px solid rgba(230,230,250,0.12);
+            font-weight: 700;
+            transition: background 0.18s, color 0.18s;
+        }
+
+        .nav-links a:hover { background: rgba(230,230,250,0.12); color: #fff; }
+
         @keyframes pulse {
             0% {
                 box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
@@ -116,6 +139,10 @@
         <div class="guide">
             </div>
         <button id="btnStart" onclick="startSystem()">Start</button>
+        <div class="nav-links" aria-label="chuyển mẫu">
+            <a class="prev" href="2.html">‹ Quay lại</a>
+            <a class="next" href="index.html">Tiếp ›</a>
+        </div>
     </div>
 
     <div id="canvas-container"></div>
